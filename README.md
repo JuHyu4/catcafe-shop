@@ -1,10 +1,10 @@
-# catcafe-shop
-Landing Page
-
 
 # Nome do Projeto
 
-Cat Café - Inspirado em um catcafé real que visitei nas minhas férias e quis fazer um site nesse tema
+Cat Café - Lading Page
+
+
+Inspirado em um catcafé real que visitei nas minhas férias e quis fazer um site nesse tema
 ---
 
 ## 📝 Descrição
