@@ -4,15 +4,7 @@ Landing Page
 
 # Nome do Projeto
 
-![Banner](assets/readme/banner.pngr.png) 
-
-## 🎬 Demonstração
-
-Confira o funcionamento do site neste vídeo:
-
-[![Demo Video](assets/readme/Video%20Project.mp4)] 
-
-[![Imagem do site](assets/readme/preview.png)]
+Cat Café - Inspirado em um catcafé real que visitei nas minhas férias e quis fazer um site nesse tema
 ---
 
 ## 📝 Descrição
