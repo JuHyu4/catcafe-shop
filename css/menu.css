@@ -1,0 +1,194 @@
+.cabecalho{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-self: space-between;
+    align-items: center;
+    background-color: var(--pink-main);
+
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.logo h2{
+    font-family: 'Cherry Bomb One', serif;
+    font-size: 32px;
+    color: #ffffff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+}
+.menu{
+     width: min(100% - 4rem, 1400px);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+   justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+     padding: 1.5rem 0 0 0;
+    
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+
+.links-menu ul{
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+    padding-left: 2rem;
+}
+
+.links-menu li{
+    display: inline;
+    margin: 2rem;
+    font-family: 'Monomaniac One', cursive;
+    font-size: 24px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 4px 4px rgba(145, 96, 96, 0.473);
+   
+
+}
+
+
+.links-menu a {
+  color: #ffffff;
+  font-family: 'Monomaniac One', cursive;
+  font-size: 24px;
+  text-transform: uppercase;
+  paint-order: stroke fill;
+
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.links-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.links-menu a:hover {
+  color: #91505e;
+}
+
+.links-menu a:hover::after {
+  width: 100%;
+}
+
+/* clique */
+.links-menu a:active {
+  transform: scale(0.95);
+}
+
+
+
+
+/* ///////////////////////////  MENU LATERAL ////////////////////*/
+
+
+
+.menu.lateral {
+  position: fixed;
+  top: 50%;
+  right: 15px; 
+  transform: translateY(-50%);
+  width: 160px;
+  padding: 1rem;
+  background-color: rgba(240, 145, 145, 0.315);
+  border-radius: 50px;
+  box-shadow: -5px 5px 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  z-index: 9999;
+}
+
+.menu.lateral .links-menu ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 80%;
+}
+
+.menu.lateral .links-menu li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.menu.lateral .links-menu li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+
+.menu.lateral .links-menu a {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Monomaniac One', cursive;
+  transition: color 0.3s;
+}
+
+.menu.lateral .links-menu a:hover {
+  color: var(--pink-light);
+}
+
+
+.menu.lateral .carrinho-float {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.menu.lateral .carrinho-float img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 50%;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.menu.lateral .carrinho-float img:hover {
+  transform: scale(1.2);
+}
+
+.menu.lateral .logo,
+.menu.lateral nav .carrinho {
+  display: none;
+}
+
