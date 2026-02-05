@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAT CAFÉ</title>
+
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="carrinho.css">
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header class="cabecalho">
+
+        <nav class="menu">
+            <button class="hamburger" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="logo">
+                <img src="./assets/img/LOGO-IMG.png" alt="Cat Café">
+                <h2>CAT CAFÉ</h2>
+            </div>
+
+            <div class="links-menu">
+                <ul>
+                    <li><a href="#intro">Inicio</a></li>
+                    <li><a href="#gatinhos">Gatinhos</a></li>
+                    <li><a href="#cafes">Café</a></li>
+                    <li><a href="#doces">Doces</a></li>
+                    <li><a href="#outros">Outros</a></li>
+                    <li><a href="#adocao">Adoção</a></li>
+                </ul>
+            </div>
+
+            <!-- //// CARRINHO //// -->
+
+            <div class="carrinho">
+                <img src="./assets/img/CARRINHO.png" alt="Carrinho">
+            </div>
+
+            <div class="cart-overlay"></div>
+
+            <div class="cart-panel">
+
+                <div class="cart-header">
+                    <h3>Meu Carrinho 🐾</h3>
+                    <button class="close-cart">✕</button>
+                </div>
+
+                <div class="cart-content"></div>
+                <div class="cart-footer">
+                    <p class="cart-total">Total: R$ 0,00</p>
+                    <button class="checkout">Finalizar pedido</button>
+                </div>
+                <div class="checkout-overlay"></div>
+
+                <div class="checkout-page">
+                    <div class="checkout-summary">
+                        <h2>Resumo do Pedido</h2>
+                        <div class="checkout-items"></div>
+                        <p class="checkout-subtotal">Subtotal: R$ 0,00</p>
+                        <p class="checkout-frete">Frete: R$ 0,00</p>
+                        <p class="checkout-total">Total: R$ 0,00</p>
+                    </div>
+
+                    <div class="checkout-form">
+                        <h2>Dados para Compra</h2>
+                        <form class="checkout-form-fields">
+                            <input type="text" name="name" placeholder="Nome completo" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="text" name="address" placeholder="Endereço" required>
+
+                            <h3>Forma de Pagamento</h3>
+                            <label>
+                                <input type="radio" name="payment" value="Pix" checked>
+                                Pix
+                            </label>
+
+                            <label>
+                                <input type="radio" name="payment" value="Cartão">
+                                Cartão de crédito
+                            </label>
+
+                            <label>
+                                <input type="radio" name="payment" value="Dinheiro">
+                                Dinheiro
+                            </label>
+
+                            <div class="payment-details"></div>
+
+                            <button type="submit">Confirmar Pedido</button>
+                            <button type="button" class="cancel-checkout-page">Cancelar</button>
+                        </form>
+                    </div>
+                </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!--INTRO-->
+        <section id="intro" class="intro">
+            <div class="intro-container">
+                <div class="intro-text">
+                    <h1>Olá, seja bem-vindo ao nosso café, um espaço para relaxar, tomar café e conhecer gatinhos.
+                    </h1>
+                </div>
+
+                <div class="intro-image">
+                    <img src="./assets/img/intro-cafe.png" alt="Café">
+                </div>
+            </div>
+
+
+            <div class="intro-detalhes">
+                <div class="detalhe-card">
+                    <img src="./assets/img/grãos-café.png" alt="graos de café" class="coffee-beans">
+                    <p>Grãos cuidadosamente escolhidos</p>
+                </div>
+
+                <div class="detalhe-card">
+                    <img src="./assets/img/gatinho.png" alt="gatinho" class="cat-hero">
+                    <p>Gatinhos para tirar fotos e fazer carinho</p>
+                </div>
+
+                <div class="detalhe-card">
+                    <img src="./assets/img/ambiente.png" alt="./assets/img/ambiente" class="environment">
+                    <p>Ambiente acolhedor para relaxar</p>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="divisoria-down"></div>
+
+        <!-- GATINHOS -->
+        <section id="gatinhos" class="gatinhos container">
+            <h2>Gatinhos</h2>
+
+            <div class="cards">
+                <!-- CARD 1 -->
+                <div class="card">
+                    <div class="front-card">
+                        <img src="./assets/img/GATINHO-1.png" alt="Mimi">
+                    </div>
+
+                    <div class="back-card">
+                        <div class="info-card">
+                            <h3>Mimi</h3>
+                            <p>Idade: 2 anos</p>
+                            <p>Personalidade: Carinhosa e curiosa</p>
+                            <p>Disponível para adoção 💕</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="card">
+                    <div class="front-card">
+                        <img src="./assets/img/GATINHO-2.png" alt="Lua">
+                    </div>
+
+                    <div class="back-card">
+                        <div class="info-card">
+                            <h3>Pompom</h3>
+                            <p>Idade: 1 ano</p>
+                            <p>Personalidade: Brincalhona</p>
+                            <p>Disponível para adoção 💕</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="card">
+                    <div class="front-card">
+                        <img src="./assets/img/GATINHO-3.png" alt="Nina">
+                    </div>
+
+                    <div class="back-card">
+                        <div class="info-card">
+                            <h3>Nina</h3>
+                            <p>Idade: 3 anos</p>
+                            <p>Personalidade: Calma e doce</p>
+                            <p>Disponível para adoção 💕</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="card">
+                    <div class="front-card">
+                        <img src="./assets/img/GATINHO-4.png" alt="Bolinha">
+                    </div>
+
+                    <div class="back-card">
+                        <div class="info-card">
+                            <h3>Bolinha</h3>
+                            <p>Idade: 1 ano</p>
+                            <p>Personalidade: Sociável</p>
+                            <p>Disponível para adoção 💕</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="card">
+                    <div class="front-card">
+                        <img src="./assets/img/GATINHO-5.png" alt="Luna">
+                    </div>
+
+                    <div class="back-card">
+                        <div class="info-card">
+                            <h3>Luna</h3>
+                            <p>Idade: 2 anos</p>
+                            <p>Personalidade: Curiosa</p>
+                            <p>Disponível para adoção 💕</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CAFÉS -->
+        <section id="cafes" class="cafes">
+            <h2>Cafés</h2>
+            <div class="cafes-container">
+                <div class="produtos">
+                    <div class="produto" data-name="Chocolate do Gatinho" data-price="12.00">
+                        <img src="./assets/img/chocolate-quente.png" alt="">
+                        <h3>Chocolate do Gatinho</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Chocolate quente cremoso, perfeito para dias aconchegantes.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+
+                    <div class="produto" data-name="Café Expresso" data-price="8.00">
+                        <img src="./assets/img/cafe-espresso.png" alt="Café Expresso">
+                        <h3>Expresso Ronronante</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Intenso, encorpado e cheio de personalidade.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+
+                    <div class="produto" data-name="Cappuccino Nuvem" data-price="10.00">
+                        <img src="./assets/img/cappuccino-xicara.png" alt="Cappuccino">
+                        <h3>Cappuccino Nuvem</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Café suave com leite vaporizado e espuma cremosa.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+
+                    <div class="produto" data-name="Mocha Carinho" data-price="11.00">
+                        <img src="./assets/img/mocha.png" alt="Mocha">
+                        <h3>Mocha Carinho</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Combinação perfeita de café, chocolate e leite.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Chás</h2>
+            <div class="cafes-container">
+                <div class="produtos">
+                    <div class="produto" data-name="Camomila Calmaria" data-price="7.00">
+                        <img src="./assets/img/CHA-CAMOMILA.png" alt="Chá de Camomila">
+                        <h3>Camomila Calmaria</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Suave e relaxante, ideal para desacelerar.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+
+                    <div class="produto" data-name="Hibisco Rubi" data-price="8.00">
+                        <img src="./assets/img/CHA-HIBISCO.png" alt="Chá de Hibisco">
+                        <h3>Hibisco Rubi</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Refrescante e levemente ácido.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+
+                    <div class="produto" data-name="Preto Clássico" data-price="7.50">
+                        <img src="./assets/img/CHA-PRETO.png" alt="Chá Preto">
+                        <h3>Preto Clássico</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Forte, tradicional e energizante.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+
+                    <div class="produto" data-name="Rosas Encantadas" data-price="9.00">
+                        <img src="./assets/img/CHA-ROSA.png" alt="Chá de Rosas">
+                        <h3>Rosas Encantadas</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Aromático e delicado, com toque floral.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+            <h2>BobaTea</h2>
+            <div class="cafes-container">
+                <div class="produtos">
+
+                    <div class="produto" data-name="Boba Caramelo" data-price="12.00">
+                        <img src="./assets/img/bobatea-caramelo.png" alt="Boba Tea Caramelo">
+                        <h3>Boba Caramelo</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Doce na medida certa com pérolas macias.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+
+                    <div class="produto" data-name="Boba Coffee" data-price="13.00">
+                        <img src="./assets/img/bobatea-coffee.png" alt="Boba Tea Coffee">
+                        <h3>Boba Coffee</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Para quem ama café em todas as formas.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+
+                    <div class="produto" data-name="Boba Uva" data-price="12.50">
+                        <img src="./assets/img/bobatea-grape.png" alt="Boba Tea Uva">
+                        <h3>Boba Uva</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Refrescante e frutado.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+
+                    <div class="produto" data-name="Boba Morango" data-price="12.50">
+                        <img src="./assets/img/bobatea-strawberry.png" alt="Boba Tea Morango">
+                        <h3>Boba Morango</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Doce, leve e irresistível.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </section>
+
+        <!-- GLOCERIAS -->
+        <section id="doces" class="doces">
+            <h2>Doces</h2>
+            <div class="doces-container">
+                <div class="produtos">
+                    <div class="produto" data-name="Crepe Doce Encanto" data-price="10.00">
+                        <img src="./assets/img/Crepe de morango.png" alt="Crepe de Morango">
+                        <h3>Crepe Doce Encanto</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Crepe macio recheado com morangos frescos e creme suave.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+
+                    <div class="produto" data-name="Dango Crocante" data-price="9.00">
+                        <img src="./assets/img/Dango-crocante.png" alt="Dango Crocante">
+                        <h3>Dango Crocante</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Bolinhas japonesas crocantes por fora e macias por dentro.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+
+                    <div class="produto" data-name="Torta Gatinho Feliz" data-price="11.00">
+                        <img src="./assets/img/Torta de biscoito.png" alt="Torta de Biscoito">
+                        <h3>Torta Gatinho Feliz</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Camadas de biscoito com creme delicado e sabor caseiro.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+                    <div class="produto" data-name="Croissant Gatinho" data-price="8.00">
+                        <img src="./assets/img/croissant .png" alt="Croissant">
+                        <h3>Croissant Gatinho</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Croissant crocante e saboroso, perfeito para o café da manhã.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+            <h2>Salgados</h2>
+            <div class="salgados-container">
+                <div class="produtos">
+                    <div class="produto" data-name="Hambúrguer Ronronante" data-price="15.00">
+                        <img src="./assets/img/Hamburguer-gatinho.png" alt="Hambúrguer Gatinho">
+                        <h3>Hambúrguer Ronronante</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Pão macio, recheio suculento e muito carinho em cada mordida.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+
+                    <div class="produto" data-name="Panquecas Nuvem" data-price="10.00">
+                        <img src="./assets/img/Panquecas de mashmallow.png" alt="Panquecas de Marshmallow">
+                        <h3>Panquecas Nuvem</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Panquecas fofinhas com marshmallows levemente derretidos.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+                    <div class="produto" data-name="Waffer Gatinho" data-price="7.00">
+                        <img src="./assets/img/WAFFER.png" alt="WAFFER">
+                        <h3>Waffer Gatinho</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Waffers crocantes e saborosas, perfeitas para um lanche.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divisoria-top"></div>
+        <!-- OUTROS -->
+        <section id="outros" class="outros">
+            <h2>Outros</h2>
+            <div class="outros-container">
+                <div class="produtos">
+                    <div class="produto" data-name="Luminária Lua Gatinho" data-price="45.00">
+                        <img src="./assets/img/luagatinho.png" alt="Luminária Lua Gatinho">
+                        <h3>Luminária Lua Gatinho</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Luz suave para deixar o ambiente aconchegante.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+                    <div class="produto" data-name="Lâmpada Gatinho" data-price="25.00">
+                        <img src="./assets/img/lampada-gatinho.png" alt="Lâmpada Gatinho">
+                        <h3>Lâmpada Gatinho</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Iluminação fofa para decorar seu cantinho.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+
+                    <div class="produto" data-name="Conjunto de Xícaras" data-price="30.00">
+                        <img src="./assets/img/conjunto-xicara.png" alt="Conjunto de Xícaras">
+                        <h3>Conjunto de Xícaras</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Perfeito para um café cheio de estilo.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+
+                    <div class="produto" data-name="Duo de Xícaras" data-price="20.00">
+                        <img src="./assets/img/duo-xicara.png" alt="Duo de Xícaras">
+                        <h3>Duo de Xícaras</h3>
+                        <span class="preco">R$ 12,00</span>
+                        <p>Ideal para compartilhar bons momentos.</p>
+                        <button class="add-cart">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divisoria-down"></div>
+
+        <!-- ADOÇÃO -->
+        <section id="adocao" class="adocao container">
+            <h2>Para adotar um gatinho entre em contato</h2>
+            <form class="adoption-form">
+                <input type="text" placeholder="Nome" id="name" required>
+
+                <textarea placeholder="Mensagem" id="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="assinatura">© Cat Café</p>
+        <div class="redes-sociais">
+            <a href="https://wa.me/5548988105323" target="_blank" aria-label="WhatsApp">
+                <img src="https://img.icons8.com/ios/50/whatsapp--v1.png" alt="WhatsApp">
+            </a>
+
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                <img src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="Instagram">
+            </a>
+
+            <a href="https://www.linkedin.com/in/julyana-trr/" target="_blank" aria-label="LinkedIn">
+                <img src="https://img.icons8.com/ios/50/linkedin.png" alt="LinkedIn">
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

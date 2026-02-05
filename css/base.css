@@ -1,0 +1,111 @@
+:root {
+  --pink-light: #ffc5c5;
+  --pink-main: #F68E8E;
+  --white: #ffffff;
+  --text: #4a2a2a;
+  --radius-lg: 40px;
+  --radius-md: 20px;
+}
+
+@font-face {
+    font-family: 'Cherry Bomb One'; 
+    src: url('./assets/fonts/Cherry_Bomb_One/CherryBombOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Monomaniac One'; 
+    src: url('./assets/fonts/Monomaniac_One/MonomaniacOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mate'; 
+    src: url('./assets/fonts/Mate/Mate-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--pink-light);
+  color: var(--white);
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+section {
+  width: 100%;
+  position: relative;
+  overflow: visible;
+}
+.main,
+.content,
+.page {
+  height: auto;
+  min-height: 80%;
+  overflow: visible;
+}
+
+
+/* //// ANIMAÇÕES E DECORATION /// */
+
+
+@-webkit-keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #7c6464, 0 2px 0 #7c6464, 0 3px 0 #7c6464, 0 4px 0 #7c6464, 0 5px 0 #7c6464, 0 6px 0 #7c6464, 0 7px 0 #7c6464, 0 8px 0 #7c6464, 0 9px 0 #7c6464, 0 50px 30px rgba(168, 131, 131, 0.3);
+  }
+}
+@keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #7c6464, 0 2px 0 #7c6464, 0 3px 0 #7c6464, 0 4px 0 #7c6464, 0 5px 0 #7c6464, 0 6px 0 #7c6464, 0 7px 0 #7c6464, 0 8px 0 #7c6464, 0 9px 0 #7c6464, 0 50px 30px rgba(117, 95, 95, 0.3);
+  }
+}
+
+@keyframes text-pop-up-bottom {
+  0%{transform:translateY(0);transform-origin:40% 40%;text-shadow:none}100%{transform:translateY(20px);transform-origin:40% 40%;text-shadow:0 1px 0 #7c6464,0 2px 0 #7c6464,0 3px 0 #7c6464,0 4px 0 #7c6464,0 5px 0 #7c6464,0 6px 0 #7c6464,0 7px 0 #7c6464,0 8px 0 #7c6464,0 9px 0 #7c6464,0 50px 30px rgba(117, 95, 95, 0.3)}
+}
+
+
+@keyframes slideInRight {
+  from {
+    transform: translateY(-50%) translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+  }
+}
