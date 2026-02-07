@@ -157,17 +157,9 @@ h1 {
     flex-direction: column;
   }
 
-  .intro-detalhes {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
-  }
-
 .intro-detalhes img {
     width: 100px;
     margin: 0;
-    height: auto;
   }
 
   .gatinhos {
@@ -229,6 +221,17 @@ h1 {
   right: -3rem;
 }
 
+
+
+  .card {
+    min-width: unset;
+  }
+
+  .cafes h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+
   .produtos {
     flex-direction: column;
     align-items: center;
@@ -240,6 +243,10 @@ h1 {
 
   .doces {
     padding: 2rem 1rem;
+  }
+
+  .doces h2 {
+    font-size: 36px;
   }
 
   .cards-doces,
@@ -258,6 +265,10 @@ h1 {
     padding-bottom: 3rem;
   }
 
+  .outros h2 {
+    font-size: 36px;
+  }
+
   .card-outros {
     flex-direction: column;
     align-items: center;
@@ -270,6 +281,14 @@ h1 {
   .adocao {
     height: auto;
     padding: 4rem 1rem;
+  }
+
+  .adocao h2 {
+    font-size: 36px;
+  }
+
+  .adocao p {
+    font-size: 20px;
   }
 
   .adocao form {
@@ -398,6 +417,41 @@ h1 {
     background: rgba(0, 0, 0, 0.25);
     border-radius: 10px;
   }
+
+   .gatinhos .card.card-principal {
+
+   display: flex;
+  width: 90%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.gatinhos .slider-prev,
+.gatinhos .slider-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.gatinhos .slider-prev {
+  left: -3rem;
+}
+
+.gatinhos .slider-next {
+  right: -3rem;
+}
+
 
   .cart-panel {
     width: 400px;
