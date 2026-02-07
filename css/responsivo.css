@@ -5,12 +5,21 @@
 /* /// CELULAR /// */
 
 @media (max-width: 768px) {
+body{
+  min-width: 320px;
+  margin: 0;
+}
+
+.container{
+  max-width: 768px; 
+}
+
   .cabecalho {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 130px;
     z-index: 1000;
     background-color: var(--pink-main);
     display: flex;
@@ -29,7 +38,7 @@
     margin-left: 0;
     position: absolute;
     right: 1.5rem;
-    padding: 0;
+    padding: 0 2rem;
   }
 
   .carrinho img {
@@ -43,7 +52,7 @@
   .links-menu {
     position: fixed;
     inset: 0;
-    background: var(--pink-main);
+    background: rgba(216, 119, 119, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,29 +92,24 @@
   /* ////////// INTRO ///////// */
 
   .intro {
-    padding: 12rem 1rem;
+    padding: 18rem 1rem;
   }
 
-  .intro-quadro-1,
-  .intro-quadro-2 {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .intro-text {
+  .intro-text{
     max-width: 100%;
     text-align: center;
+    padding-top: 3.5rem;
   }
 
   .intro-text h1 {
-    font-size: 28px;
+    font-family: 'Monomaniac One', cursive;
+    font-size: 20px;
     margin-top: 2rem;
   }
 
   .intro-image img {
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     margin-left: 0;
   }
 
@@ -114,17 +118,25 @@
   }
 
   .gatinhos h2 {
-    font-size: 19px;
+    font-size: 36px;
   }
 
-  .gatinhos .cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
+  
 
   .gatinhos .card {
     width: 160px;
     height: 220px;
+    
+  }
+
+   .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: visible;
+  }
+
+  .card {
+    min-width: auto;
   }
 
   .cafes h2 {

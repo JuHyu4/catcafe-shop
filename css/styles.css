@@ -1,5 +1,5 @@
 .container {
-  width: min(100% - 2rem, 1400px);
+  width: 100%;
   margin-inline: auto;
 }
 
@@ -139,7 +139,7 @@
 .card img {
   width: 270px;
   height: auto;
-
+  border-radius: 60px;
 }
 
 
@@ -236,13 +236,7 @@
   border-radius: clamp(120px, 20vw, 400px) / clamp(40px, 8vw, 80px);
 }
 
-.cafes-container,
-.doces-container,
-.salgado-container {
-  width: min(100% - 4rem, 1800px);
-  display: flex;
-  gap: clamp(2rem, 3vw, 4rem);
-}
+
 
 .cafes h2,
 .doces h2,
