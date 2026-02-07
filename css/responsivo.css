@@ -5,9 +5,11 @@
 /* /// CELULAR /// */
 
 @media (max-width: 768px) {
-body{
+html, body{
   min-width: 320px;
   margin: 0;
+   overflow-x: hidden;
+    touch-action: pan-y;
 }
 
 .container{
@@ -133,7 +135,8 @@ body{
    .gatinhos .cards {
     display: flex;
     gap: 1rem;
-
+    touch-action: pan-x;
+    scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 1rem;
