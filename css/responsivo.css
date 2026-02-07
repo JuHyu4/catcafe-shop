@@ -10,6 +10,27 @@ html, body{
   margin: 0;
   overflow-x: hidden;
 }
+h1 {
+    font-family: 'Mona Sans', sans-serif;
+    font-size: 36px;
+   
+  }
+
+  h2 {
+    font-family: 'Mate', serif;
+    font-size: 32px;
+
+  }
+
+  h3 {
+    font-family: 'Monomaniac One', cursive;
+    font-size: 24px;
+  }
+
+  p{
+    font-family: 'Popins', cursive;
+    font-size: 18px;
+  }
 
 
 .container{
@@ -124,11 +145,7 @@ html, body{
     padding-top: 3rem;
   }
 
-  .intro-text h1 {
-    font-family: 'Monomaniac One', cursive;
-    font-size: 36px;
-    margin-top: 1rem;
-  }
+  
 
   .intro-image img {
     max-width: 400px;
@@ -141,14 +158,6 @@ html, body{
   }
 .intro-detalhes img {
     width: 100px;
-  }
-
-  .intro-detalhes p {
-    font-size: 25px;
-  }
-
-  .gatinhos h2 {
-    font-size: 36px;
   }
 
   .gatinhos {
@@ -297,6 +306,10 @@ html, body{
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
+  h1{
+    font-size: clamp(36px, 4vw, 48px);
+  }
+
   .cabecalho {
     position: fixed;
     top: 0;
@@ -367,11 +380,6 @@ html, body{
     gap: 2rem;
   }
 
-  .intro-text h1 {
-    font-size: 30px;
-
-  }
-
   .intro-image img {
     width: 360px;
   }
@@ -411,10 +419,7 @@ html, body{
   .cart-panel {
     width: 400px;
   }
-  .gatinhos h2 {
-    font-size: 48px;
-  }
-
+  
   .gatinhos .cards {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
@@ -427,10 +432,6 @@ html, body{
     height: 260px;
   }
 
-  .cafes h2 {
-    font-size: 48px;
-  }
-
   .produtos {
     flex-wrap: wrap;
     justify-content: center;
@@ -440,9 +441,7 @@ html, body{
     max-width: 280px;
   }
 
-  .doces h2 {
-    font-size: 48px;
-  }
+
 
   .cards-doces,
   .cards-salgados {
@@ -460,9 +459,6 @@ html, body{
     padding-bottom: 4rem;
   }
 
-  .outros h2 {
-    font-size: 48px;
-  }
 
   .card-outros {
     flex-wrap: wrap;
@@ -475,14 +471,6 @@ html, body{
   .adocao {
     height: auto;
     padding: 5rem 2rem;
-  }
-
-  .adocao h2 {
-    font-size: 48px;
-  }
-
-  .adocao p {
-    font-size: 24px;
   }
 
   .adocao form {
