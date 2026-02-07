@@ -126,7 +126,7 @@ html, body{
 
   .intro-text h1 {
     font-family: 'Monomaniac One', cursive;
-    font-size: 20px;
+    font-size: 36px;
     margin-top: 1rem;
   }
 
@@ -144,7 +144,7 @@ html, body{
   }
 
   .intro-detalhes p {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .gatinhos h2 {
