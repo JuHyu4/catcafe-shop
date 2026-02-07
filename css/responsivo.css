@@ -11,7 +11,7 @@ html, body{
   overflow-x: hidden;
 }
 h1 {
-    font-family: 'Mona Sans', sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 36px;
    
   }
@@ -23,12 +23,12 @@ h1 {
   }
 
   h3 {
-    font-family: 'Monomaniac One', cursive;
+    font-family: 'Monomaniac One' , cursive;
     font-size: 24px;
   }
 
   p{
-    font-family: 'Popins', cursive;
+    font-family: 'Popins', sans-serif;
     font-size: 18px;
   }
 
