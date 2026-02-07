@@ -11,7 +11,7 @@ html, body{
   overflow-x: hidden;
 }
 h1 {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Mona Sans', sans-serif;
     font-size: 36px;
    
   }
@@ -156,8 +156,18 @@ h1 {
   .detalhe-intro {
     flex-direction: column;
   }
+
+  .intro-detalhes {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
 .intro-detalhes img {
     width: 100px;
+    margin: 0;
+    height: auto;
   }
 
   .gatinhos {
@@ -219,17 +229,6 @@ h1 {
   right: -3rem;
 }
 
-
-
-  .card {
-    min-width: unset;
-  }
-
-  .cafes h2 {
-    font-size: 36px;
-    text-align: center;
-  }
-
   .produtos {
     flex-direction: column;
     align-items: center;
@@ -241,10 +240,6 @@ h1 {
 
   .doces {
     padding: 2rem 1rem;
-  }
-
-  .doces h2 {
-    font-size: 36px;
   }
 
   .cards-doces,
@@ -263,10 +258,6 @@ h1 {
     padding-bottom: 3rem;
   }
 
-  .outros h2 {
-    font-size: 36px;
-  }
-
   .card-outros {
     flex-direction: column;
     align-items: center;
@@ -279,14 +270,6 @@ h1 {
   .adocao {
     height: auto;
     padding: 4rem 1rem;
-  }
-
-  .adocao h2 {
-    font-size: 36px;
-  }
-
-  .adocao p {
-    font-size: 20px;
   }
 
   .adocao form {
