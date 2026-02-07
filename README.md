@@ -32,7 +32,7 @@ Utilizando:
 - **Footer interativo:** Redes sociais com hover animado
 - **Divisórias decorativas:** Efeito scallop no início e fim das seções
 
----
+---<img src="assets/readme/preview.png" alt="Modelo Projeto">
 
 ## 💻 Tecnologias utilizadas
 
