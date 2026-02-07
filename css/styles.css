@@ -103,7 +103,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: clamp(6rem, 12vw, 14rem);
+  padding-bottom: 6rem;
   margin-bottom: 2rem;
   gap: 3rem;
 }
@@ -123,26 +123,6 @@
 
 
 
-.card {
-  display: flex;
-  flex-direction: row;
-  cursor: pointer;
-  transition: ease-in-out 0.4s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  transition: ease-in-out 0.4s;
-}
-
-
-.card img {
-  width: 270px;
-  height: auto;
-  border-radius: 60px;
-}
-
-
 .intro>*,
 .gatinhos>* {
   position: relative;
@@ -153,27 +133,45 @@
 
 /*////// CAT CARDS //////*/
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+.gatinhos .cards {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
   gap: 2rem;
-  margin: 2rem;
-  justify-items: center;
 }
 
+
 .gatinhos .card {
-  width: 240px;
-  height: 300px;
+  display: none;
   position: relative;
-  perspective: 1000px;
+  width: 700px;
+  height: 700px;
+  ;
+  flex-shrink: 0;
+  transition: transform 0.4s ease, z-index 0.2s ease;
+  transform-origin: center;
 }
+
+.card:hover {
+  transform: scale(1.15);
+  z-index: 20;
+}
+
+
+
+.gatinhos .card.card-ativa {
+  display: block;
+}
+
 
 .gatinhos .front-card,
 .gatinhos .back-card {
   width: 100%;
   height: 100%;
   position: absolute;
-  inset: 0;
   border-radius: 20px;
   backface-visibility: hidden;
   overflow: hidden;
@@ -184,14 +182,36 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+
 }
 
 .gatinhos .back-card {
   background-color: rgba(228, 92, 92, 0.26);
   transform: rotateY(180deg);
   display: flex;
+  padding: 2rem;
+  box-sizing: border-box;
   align-items: center;
   justify-content: center;
+}
+
+.gatinhos .info-card h3 {
+  font-size: 1.4rem;
+  transition: font-size 0.3s ease;
+}
+
+.gatinhos .info-card p {
+  font-size: 1rem;
+  transition: font-size 0.3s ease;
+}
+
+.gatinhos .card:hover .info-card h3 {
+  font-size: 2rem;
+}
+
+.gatinhos .card:hover .info-card p {
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 .gatinhos .card:hover .front-card {
@@ -214,6 +234,58 @@
 
 .gatinhos .info-card p {
   font-size: 0.9rem;
+
+
+}
+
+/* ===== SETAS  ===== */
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-prev,
+.slider-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+
+  width: 56px;
+  height: 56px;
+
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+
+  background-color: var(--pink-main);
+  color: #fff;
+  font-size: 32px;
+  line-height: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+.slider-prev:hover,
+.slider-next:hover {
+  background-color: var(--pink-light);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slider-prev {
+  left: calc(20% - 350px - 20px);
+}
+
+.slider-next {
+  right: calc(20% - 350px - 20px);
 }
 
 
@@ -273,14 +345,15 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 3rem;
+  padding: 2rem;
 
 }
 
 .outros-container {
   background-color: var(--pink-main);
-  width: min(100% - 4rem, 1800px);
+  width: min(100% - 3rem, 1800px);
   display: flex;
 }
 
@@ -292,7 +365,7 @@
   display: flex;
   flex-wrap: wrap;
   padding: 1rem;
-  gap: clamp(1.5rem, 2.5vw, 3rem);
+  gap: 3rem;
 }
 
 
@@ -301,7 +374,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 280px;
+  width: 300px;
   min-height: 450px;
   background-color: rgba(245, 208, 208, 0.123);
   padding: 2rem;

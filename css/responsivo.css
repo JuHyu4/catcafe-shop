@@ -8,9 +8,9 @@
 html, body{
   min-width: 320px;
   margin: 0;
-   overflow-x: hidden;
-    touch-action: pan-y;
+  overflow-x: hidden;
 }
+
 
 .container{
   max-width: 768px; 
@@ -26,29 +26,46 @@ html, body{
     background-color: var(--pink-main);
     display: flex;
     align-items: center;
-    padding: 0 1rem;
+    padding: 3rem;
+    justify-content: center;
   }
 
   .hamburger {
     display: flex !important;
     position: absolute;
-    left: 1.5rem;
+    left: 1rem;
     z-index: 1001;
   }
 
-  .carrinho {
-    margin-left: 0;
-    position: absolute;
-    right: 1.5rem;
-    padding: 0 2rem;
+  .logo {
+    max-width: 30px;
+    height: auto;
+  }
+
+   .carrinho {
+    position: fixed;
+    top: 20px;
+    right: 15px;     
+    bottom: auto;
+    transform: none;
+    z-index: 2000;
+  }
+
+  .carrinho.floating,
+  .carrinho-floating {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    left: auto;
+    bottom: auto;
+    display: block;
   }
 
   .carrinho img {
-    width: 50px;
-  }
-
-  .logo {
-    margin: 0 auto;
+    width: 80px; 
+    height: auto;
+    transition: all 0.4s ease;
+    cursor: pointer;
   }
 
   .links-menu {
@@ -93,31 +110,37 @@ html, body{
 
   /* ////////// INTRO ///////// */
 
-  .intro {
-    padding: 18rem 1rem;
+  .intro-container {
+    padding: 18rem 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .intro-text{
     max-width: 100%;
     text-align: center;
-    padding-top: 3.5rem;
+    padding-top: 3rem;
   }
 
   .intro-text h1 {
     font-family: 'Monomaniac One', cursive;
     font-size: 20px;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   .intro-image img {
-    width: 100%;
-    max-width: 300px;
-    margin-left: 0;
+    max-width: 400px;
+    height: auto;
+    margin: 0;
   }
 
   .detalhe-intro {
     flex-direction: column;
-    margin-top: 3rem;
+  }
+.intro-detalhes img {
+    width: 100px;
   }
 
   .intro-detalhes p {
@@ -128,15 +151,19 @@ html, body{
     font-size: 36px;
   }
 
-  .gatinhos{
-    padding: 2rem 1rem;
-  }
+  .gatinhos {
+  position: relative;
+  overflow: hidden;
+}
 
    .gatinhos .cards {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
-    touch-action: pan-x;
-    scroll-behavior: smooth;
+    width: 100%;
+    transition: transform 0.4s ease;
+    touch-action: pan-y;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 1rem;
@@ -146,12 +173,44 @@ html, body{
   }
 
   .gatinhos .card {
-    flex: 0 0 auto;
-    width: 160px;
-    height: 220px;
-    scroll-snap-align: start;
+    display: none;
     
   }
+  .gatinhos .card.card-principal {
+
+   display: flex;
+  width: 90%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.gatinhos .slider-prev,
+.gatinhos .slider-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.gatinhos .slider-prev {
+  left: -3rem;
+}
+
+.gatinhos .slider-next {
+  right: -3rem;
+}
+
+
 
   .card {
     min-width: unset;
@@ -236,7 +295,6 @@ html, body{
  
 }
 
-
 @media (min-width: 768px) and (max-width: 1024px) {
 
   .cabecalho {
@@ -261,7 +319,7 @@ html, body{
 
   .carrinho img,
   .hamburger img {
-    width: 40px;
+    width: 50px;
     height: auto;
   }
 
@@ -297,14 +355,21 @@ html, body{
     padding-left: 2rem;
   }
 
+ .intro {
+  padding: 4rem 2rem;
+  padding-top: 120px;
+ }
+
   .intro-container {
+  
     flex-direction: row;
     align-items: center;
     gap: 2rem;
   }
 
   .intro-text h1 {
-    font-size: 40px;
+    font-size: 30px;
+
   }
 
   .intro-image img {
@@ -346,29 +411,6 @@ html, body{
   .cart-panel {
     width: 400px;
   }
-
-  .intro {
-    padding: 3rem 2rem;
-    padding-top: 120px;
-  }
-
-  .intro-text {
-    max-width: 500px;
-  }
-
-  .intro-text h1 {
-    font-size: 40px;
-  }
-
-  .intro-image img {
-    width: 360px;
-    margin-left: 0;
-  }
-
-  .intro-detalhes p {
-    font-size: 24px;
-  }
-
   .gatinhos h2 {
     font-size: 48px;
   }
@@ -453,7 +495,7 @@ html, body{
     padding: 2rem;
   }
 
-}
+} 
 
 @media (min-width: 1024px) and (max-width: 1400px) {
   .container {
@@ -547,25 +589,66 @@ html, body{
     transform: scale(1.2) rotate(-10deg);
   }
 
-
-  .gatinhos h2 {
-    font-size: 56px;
+ .gatinhos {
+    position: relative;
+    overflow: hidden;
   }
+
 
   .gatinhos .cards {
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    max-width: calc(240px * 6 + 2rem * 5);
+    margin-inline: auto;
+    flex-wrap: nowrap;
+    position: relative;
+    justify-content: center;
     gap: 2rem;
-  }
-
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
+    overflow: hidden;
+    max-width: 1200px;
   }
 
   .gatinhos .card {
-    width: 230px;
+    flex: 0 0 240px;
+    display: block;
+    width: 240px;
     height: 300px;
+  }
+
+
+
+
+  .slider-prev,
+  .slider-next {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f7a7a7;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 5;
+  }
+
+.slider-prev {
+  left:-3rem;
+}
+
+.slider-next {
+  right:-3rem;
+}
+
+ .slider-prev:hover,
+  .slider-next:hover {
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .slider-prev {
+    left: 2rem;
+  }
+
+  .slider-next {
+    right: 2rem;
   }
 
   .cafes {
@@ -664,7 +747,6 @@ html, body{
     z-index: 10000;
     display: flex;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    /* Forçando o gatinho a aparecer mesmo sem a classe .active do JS se necessário */
     opacity: 1;
     transform: scale(1);
   }
@@ -735,13 +817,14 @@ html, body{
 .cafes h2 {
   font-size: 72px;
 }
-
 .gatinhos .cards {
-  grid-template-columns: repeat(6, 1fr);
-  gap: 2.5rem;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow: hidden;
 }
 
 .gatinhos .card {
+  flex: 0 0 240px;
   width: 260px;
   height: 320px;
 }

@@ -239,3 +239,66 @@ function updateCheckoutPage() {
     alert('Formulário enviado! Seus dados foram salvos localmente.');
   });
 
+///// SLIDER GATINHOS (DESKTOP + MOBILE) /////
+
+const cards = document.querySelectorAll('.gatinhos .card');
+const prev = document.querySelector('.slider-prev');
+const next = document.querySelector('.slider-next');
+
+let indiceAtual = 0;
+const CARDS_POR_QUADRO_DESKTOP = 3;
+
+function atualizarSlider() {
+  const isMobile = window.innerWidth <= 768;
+
+  // limpa tudo
+  cards.forEach(card => {
+    card.classList.remove('card-principal');
+    card.classList.remove('card-ativa');
+  });
+
+  if (isMobile) {
+    // 👉 MOBILE: 1 card apenas
+    cards[indiceAtual].classList.add('card-principal');
+  } else {
+    // 👉 DESKTOP: 3 cards por quadro
+    const inicio = indiceAtual * CARDS_POR_QUADRO_DESKTOP;
+    const fim = inicio + CARDS_POR_QUADRO_DESKTOP;
+
+    for (let i = inicio; i < fim; i++) {
+      if (cards[i]) cards[i].classList.add('card-ativa');
+    }
+  }
+}
+
+// SETA DIREITA
+next?.addEventListener('click', () => {
+  const isMobile = window.innerWidth <= 768;
+
+  if (isMobile) {
+    indiceAtual = (indiceAtual + 1) % cards.length;
+  } else {
+    const totalQuadros = Math.ceil(cards.length / CARDS_POR_QUADRO_DESKTOP);
+    indiceAtual = (indiceAtual + 1) % totalQuadros;
+  }
+
+  atualizarSlider();
+});
+
+// SETA ESQUERDA
+prev?.addEventListener('click', () => {
+  const isMobile = window.innerWidth <= 768;
+
+  if (isMobile) {
+    indiceAtual = (indiceAtual - 1 + cards.length) % cards.length;
+  } else {
+    const totalQuadros = Math.ceil(cards.length / CARDS_POR_QUADRO_DESKTOP);
+    indiceAtual = (indiceAtual - 1 + totalQuadros) % totalQuadros;
+  }
+
+  atualizarSlider();
+});
+
+// inicial + resize
+window.addEventListener('resize', atualizarSlider);
+atualizarSlider();
