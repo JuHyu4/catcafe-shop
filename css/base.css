@@ -18,7 +18,7 @@
 
 @font-face {
     font-family: 'Mate'; 
-    src: url('assets/fonts/Mate/Mate-Regular.ttf');
+    src: url('../assets/fonts/');
 }
 
 * {

@@ -7,6 +7,8 @@ Cat Café - Lading Page
 Inspirado em um catcafé real que visitei nas minhas férias e quis fazer um site nesse tema
 
 
+<img src="assets/readme/banner.png" alt="Banner">
+
 ## 📝 Descrição
 
 Este projeto é um **site interativo** que combina seções de introdução, produtos (cafés, doces, salgados), cards de adoção de gatos e um menu lateral responsivo junto de um formulario e processo de pedidos.
