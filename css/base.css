@@ -29,7 +29,9 @@
   text-decoration: none;
 }
 
-body {
+html, body {
+  overflow-x: hidden;
+  width: 100%;
   background: var(--pink-light);
   color: var(--white);
 }

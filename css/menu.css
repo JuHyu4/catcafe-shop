@@ -74,11 +74,11 @@
 
 .links-menu a {
   color: #ffffff;
-  font-family: 'Monomaniac One', cursive;
+  font-family: 'Mate', cursive;
+  font-weight: 900;
   font-size: 24px;
   text-transform: uppercase;
   paint-order: stroke fill;
-
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
@@ -120,7 +120,7 @@
   right: 15px; 
   transform: translateY(-50%);
   width: 160px;
-  padding: 1rem;
+  padding: 0;
   background-color: rgba(240, 145, 145, 0.315);
   border-radius: 50px;
   box-shadow: -5px 5px 20px rgba(0,0,0,0.2);
@@ -145,25 +145,19 @@
   gap: 0.5rem;
 }
 
-.menu.lateral .links-menu li::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%;
-}
 
 
 .menu.lateral .links-menu a {
-  font-size: 16px;
-  color: #fff;
+  font-family: 'Mate', cursive;
+  font-weight: 800;
+  font-size: 19px;
+  color: #532c2c;
   text-decoration: none;
-  font-family: 'Monomaniac One', cursive;
   transition: color 0.3s;
 }
 
 .menu.lateral .links-menu a:hover {
-  color: var(--text);
+  color: var(--pink-light);
 }
 
 

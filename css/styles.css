@@ -63,7 +63,7 @@
   flex-wrap: nowrap;
 }
 
-.detalhe-card {
+.detalhe-intro {
   display: flex;
   flex-direction: column;
   align-items: center;

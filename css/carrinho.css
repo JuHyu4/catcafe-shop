@@ -53,9 +53,8 @@
 }
 
 .carrinho.floating {
-  position: fixed;
-  top: 40px;
-  right: 20px;
+  bottom: 20px;
+  left: 20px;
   z-index: 10000;
   display: flex;
   opacity: 1;

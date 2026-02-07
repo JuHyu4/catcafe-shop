@@ -109,8 +109,13 @@ body{
 
   .intro-image img {
     width: 100%;
-    max-width: 800px;
+    max-width: 300px;
     margin-left: 0;
+  }
+
+  .detalhe-intro {
+    flex-direction: column;
+    margin-top: 3rem;
   }
 
   .intro-detalhes p {
@@ -121,22 +126,32 @@ body{
     font-size: 36px;
   }
 
-  
+  .gatinhos{
+    padding: 2rem 1rem;
+  }
+
+   .gatinhos .cards {
+    display: flex;
+    gap: 1rem;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+  }
+  .gatinhos .cards::-webkit-scrollbar {
+    display: none;
+  }
 
   .gatinhos .card {
+    flex: 0 0 auto;
     width: 160px;
     height: 220px;
+    scroll-snap-align: start;
     
   }
 
-   .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    overflow: visible;
-  }
-
   .card {
-    min-width: auto;
+    min-width: unset;
   }
 
   .cafes h2 {
@@ -358,6 +373,8 @@ body{
   .gatinhos .cards {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+    width: 100%;
+    overflow: hidden;
   }
 
   .gatinhos .card {
@@ -510,9 +527,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 2px solid rgba(255, 255, 255, 0.2);
-    /* Divisória sutil */
-    padding-top: 1.5rem;
+    border-top: 2px solid rgba(190, 119, 119, 0.2);
+    padding-top: 1rem;
     width: 100%;
   }
 
