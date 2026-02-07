@@ -9,13 +9,13 @@
 
 @font-face {
     font-family: 'Cherry Bomb One'; 
-    src: url('assets/fonts/Cherry_Bomb_One/CherryBombOne-Regular.ttf');
+    src: url('/assets/fonts/Cherry_Bomb_One/CherryBombOne-Regular.ttf');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Monomaniac One'; 
-    src: url('assets/fonts/Cherry_Bomb_One/CherryBombOne-Regular.ttf');
+    src: url('/assets/fonts/Monomaniac_One/MonomaniacOne-Regular.ttf');
     font-weight: normal;
     font-style: normal;
 }
